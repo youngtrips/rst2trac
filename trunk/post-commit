@@ -46,8 +46,14 @@
 
 REPOS="$1"
 REV="$2"
+TRAC_PATH="/trac/test"
+RST_PATH="test/trunk/doc"
 
-path=$REPOS/hooks/$$
-mkdir $path
-$REPOS/hooks/rst2trac.py $REPOS $REV $path
-rm $path -r
+# rst2trac.py usage:
+# rst2trac.py REPOS REV TRAC_PATH RST_PATH
+# 1. REPOS		the path to this repository
+# 2. REV		the number of the revision
+# 3. TRAC_PATH	the path to trac env
+# 4. RST_PATH	the path to keep rst docs that will be added into trac
+
+$REPOS/hooks/rst2trac.py $REPOS $REV $TRAC_PATH $RST_PATH
