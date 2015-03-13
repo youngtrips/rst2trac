@@ -1,0 +1,1 @@
+a svn hook to add rst docs into trac system.
